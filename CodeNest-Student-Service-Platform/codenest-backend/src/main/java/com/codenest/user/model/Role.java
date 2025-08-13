@@ -1,5 +1,7 @@
 package com.codenest.user.model;
 
-public class Role {
-    
+public enum Role {
+    USER,
+    ADMIN,
+    MODERATOR
 }

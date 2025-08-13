@@ -2,7 +2,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  
+
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.codenest</groupId>
@@ -17,7 +17,7 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>3.2.4</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <relativePath/>
   </parent>
 
   <properties>
@@ -37,14 +37,27 @@
       <artifactId>spring-boot-starter-data-mongodb</artifactId>
     </dependency>
 
-    <!-- Lombok (for @Getter, @Setter, etc.) -->
+    <!-- JPA (for jakarta.persistence.* imports) -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <!-- MySQL Driver (if you are using MySQL) -->
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- Lombok -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <optional>true</optional>
     </dependency>
 
-    <!-- Devtools (Auto-restart on changes) -->
+    <!-- Devtools -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
